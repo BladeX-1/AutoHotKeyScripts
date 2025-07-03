@@ -1,3 +1,6 @@
+#Requires AutoHotkey v1.0
+
+
 ;Volume control, Alt+Scroll wheel (and Mbutton)
 
 Alt & WheelUp::Volume_Up
