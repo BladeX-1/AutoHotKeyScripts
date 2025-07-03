@@ -4,7 +4,7 @@
 WheelUp::
     MouseGetPos, MouseX, MouseY
     if(MouseY>=55 && MouseY<=107){
-        Send {left}
+        Send {right}
     }
     else{
         Send {WheelUp}
@@ -14,7 +14,7 @@ WheelUp::
 WheelDown::
     MouseGetPos, MouseX, MouseY
     if(MouseY>=55 && MouseY<=107){
-        Send {right}
+        Send {left}
     }
     else{
         Send {WheelDown}
