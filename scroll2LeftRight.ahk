@@ -3,7 +3,8 @@
 
 WheelUp::
     MouseGetPos, MouseX, MouseY
-    if(MouseY>=55 && MouseY<=107){
+    WinGet, ActiveApp, ProcessName, A
+    if(MouseY>=55 && MouseY<=107 && !InStr("code.exe",ActiveApp)){
         Send {right}
     }
     else{
@@ -13,7 +14,8 @@ WheelUp::
 
 WheelDown::
     MouseGetPos, MouseX, MouseY
-    if(MouseY>=55 && MouseY<=107){
+    WinGet, ActiveApp, ProcessName, A
+    if(MouseY>=55 && MouseY<=107 && !InStr("code.exe",ActiveApp)){
         Send {left}
     }
     else{
