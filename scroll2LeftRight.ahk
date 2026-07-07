@@ -1,10 +1,13 @@
 #Requires AutoHotkey v1.0
 
-
-WheelUp::
+shouldThrowMappedKeys(){
     MouseGetPos, MouseX, MouseY
     WinGet, ActiveApp, ProcessName, A
-    if(MouseY>=55 && MouseY<=107 && !InStr("code.exe",ActiveApp)){
+    return MouseY>=55 && MouseY<=107 && !InStr("code.exe",ActiveApp)
+}
+
+WheelUp::
+    if(shouldThrowMappedKeys()){
         Send {right}
     }
     else{
@@ -13,9 +16,7 @@ WheelUp::
     return
 
 WheelDown::
-    MouseGetPos, MouseX, MouseY
-    WinGet, ActiveApp, ProcessName, A
-    if(MouseY>=55 && MouseY<=107 && !InStr("code.exe",ActiveApp)){
+    if(shouldThrowMappedKeys()){
         Send {left}
     }
     else{
